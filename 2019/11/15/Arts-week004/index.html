@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week004 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0041.Algorithm Binary Tree Inorder Traversal(https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;binary-tree-inorder-traversal&#x2F;)  Medium Given a binary tree, return the inorder traversal of its nodes’ values. Example:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week004">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Arts-week004&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0041.Algorithm Binary Tree Inorder Traversal(https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;binary-tree-inorder-traversal&#x2F;)  Medium Given a binary tree, return the inorder traversal of its nodes’ values. Example:">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-11-15T03:02:16.820Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week004" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/15/Arts-week004/" class="article-date">
+  <time datetime="2019-11-15T03:02:16.820Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week004
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-004"><a href="#Arts-004" class="headerlink" title="Arts-004"></a>Arts-004</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="94">
+<li>Binary Tree Inorder Traversal(<a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-inorder-traversal/</a>)</li>
+</ol>
+<p>Medium</p>
+<p>Given a binary tree, return the <em>inorder</em> traversal of its nodes’ values.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,null,2,3]</span><br><span class="line">   1</span><br><span class="line">    \</span><br><span class="line">     2</span><br><span class="line">    /</span><br><span class="line">   3</span><br><span class="line"></span><br><span class="line">Output: [1,3,2]</span><br></pre></td></tr></table></figure>
+
+<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>
+<p><strong>My Solution:</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Stack [] *TreeNode</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Push</span><span class="params">(value *TreeNode)</span></span>  &#123;</span><br><span class="line">	*stack = <span class="built_in">append</span>(*stack, value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">IsEmpty</span><span class="params">()</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(*stack) == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Peek</span><span class="params">()</span> *<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> (*stack)[<span class="built_in">len</span>(*stack) - <span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(stack *Stack)</span> <span class="title">Pop</span><span class="params">()</span> *<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">	len_stack := <span class="built_in">len</span>(*stack) <span class="number">-1</span></span><br><span class="line">	value := (*stack)[len_stack]</span><br><span class="line">	*stack = (*stack)[:len_stack]</span><br><span class="line">	<span class="keyword">return</span> value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 如果栈顶元素非空，则读取栈顶元素的左节点写入栈，继续左遍历查找，若为空则退出。</span></span><br><span class="line"><span class="comment">* pop栈顶元素，输出val，如果存在右节点压栈，并继续左遍历流程，若不存在继续pop</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">inorderTraversal</span><span class="params">(root *TreeNode)</span> []<span class="title">int</span></span> &#123;</span><br><span class="line">	result := []<span class="keyword">int</span> &#123;&#125;</span><br><span class="line">	<span class="keyword">if</span> root == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">var</span> node *TreeNode</span><br><span class="line">	stack := &amp;Stack&#123;&#125;</span><br><span class="line">	stack.Push(root)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> stack.IsEmpty() &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> stack.Peek().Left != <span class="literal">nil</span>&#123;</span><br><span class="line">				stack.Push(stack.Peek().Left )</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> stack.IsEmpty() &#123;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			node = stack.Pop()</span><br><span class="line">			result = <span class="built_in">append</span>(result, node.Val)</span><br><span class="line">			<span class="keyword">if</span> node.Right != <span class="literal">nil</span> &#123;</span><br><span class="line">				stack.Push(node.Right)</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://blog.golang.org/why-generics" target="_blank" rel="noopener">Why Generics?</a><br><strong>GO的范型设计</strong><br>Ian Lance Taylor在Gophercon 2019上介绍了关于向Go添加泛型的意义、为什么应该这样做，并介绍Go添加泛型的设计可能的改变。</p>
+<p>本文从最简单的切片反转谈起，介绍Go当前的通用编程的缺陷，提出范型解决应用场景，列出设计遵循的原则。</p>
+<ul>
+<li>尽量减少新概念</li>
+<li>复杂性落在通用代码的编写者身上，而不是用户身上</li>
+<li>库开发者和使用者可以独立工作（解耦）</li>
+<li>构建时间短，执行时间短</li>
+<li>保持Go的清晰度和简洁性</li>
+</ul>
+<p>本文也提出设计草案，包括contract设计，挺有趣。</p>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><ul>
+<li><strong>Python deque</strong> :<br>deque遵循先进先出（First-In-First-Out，FIFO）的原则，关键特性是保持队列长度一直不变<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">my_queue = deque(maxlen=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    my_queue.append(i+<span class="number">1</span>)</span><br><span class="line">print(my_queue)</span><br><span class="line"><span class="comment">#deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], maxlen=10)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>, <span class="number">15</span>):</span><br><span class="line">    my_queue.append(i+<span class="number">1</span>)</span><br><span class="line">print(my_queue)    </span><br><span class="line"><span class="comment">#deque([6, 7, 8, 9, 10, 11, 12, 13, 14, 15], maxlen=10)</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>Python namedtuple</strong> :<br>namedtuple() 可以返回一个 tuple，该 tuple 中的每个位置都有固定名称，有点像Scala的Case class<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line">Person = namedtuple(<span class="string">'Person'</span>, <span class="string">'name age job'</span>)</span><br><span class="line">Once the template <span class="keyword">is</span> created, you can use it to create namedtuple objects. Let’s create <span class="number">2</span> namedtuple’s <span class="keyword">for</span> <span class="number">2</span> Persons <span class="keyword">and</span> <span class="keyword">print</span> out their representation.</span><br><span class="line">Person = namedtuple(<span class="string">'Person'</span>, <span class="string">'name age job'</span>)</span><br><span class="line"></span><br><span class="line">Kate = Person(name=<span class="string">"Kate"</span>, age=<span class="number">18</span>, job=<span class="string">'Project Manager'</span>)</span><br><span class="line">print(Kate) <span class="comment">#Person(name='Mike', age=30, job='Data Scientist')</span></span><br><span class="line">print(Kate.name) <span class="comment">#Mike</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://lexburner.github.io/linux-io-benchmark/" target="_blank" rel="noopener">Linux 环境写文件如何稳定跑满磁盘 I/O 带宽?</a> </p>
+<p>文中做了四个实验：</p>
+<ol>
+<li><p>Buffer IO 写入</p>
+</li>
+<li><p>4K 单次 Direct IO 写入</p>
+</li>
+<li><p>mmap 写入</p>
+</li>
+<li><p>改进的 mmap 写入</p>
+</li>
+</ol>
+<p>结论是mmap还是很靠谱方案，建议可以玩一玩。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/11/15/Arts-week004/" data-id="ck2zk44wd0003jw559r0neskf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/15/Arts-week003/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arts-week003
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/15/Arts-week005/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week005</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week002/">Arts-week002</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week003/">Arts-week003</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week004/">Arts-week004</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week005/">Arts-week005</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

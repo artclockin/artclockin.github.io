@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week001 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0011.Algorithm Multiply Strings  Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: 12Input: num1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week001">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Arts-week001&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0011.Algorithm Multiply Strings  Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: 12Input: num1">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.brendangregg.com&#x2F;blog&#x2F;images&#x2F;2019&#x2F;bpfperftools_bookcover_500.png">
+<meta property="og:updated_time" content="2019-11-15T03:02:16.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.brendangregg.com&#x2F;blog&#x2F;images&#x2F;2019&#x2F;bpfperftools_bookcover_500.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/15/Arts-week001/" class="article-date">
+  <time datetime="2019-11-15T03:02:16.820Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week001
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-001"><a href="#Arts-001" class="headerlink" title="Arts-001"></a>Arts-001</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="43">
+<li><a href="https://leetcode.com/problems/multiply-strings/" target="_blank" rel="noopener">Multiply Strings</a></li>
+</ol>
+<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;</span><br><span class="line">Output: &quot;6&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;</span><br><span class="line">Output: &quot;56088&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong></p>
+<ol>
+<li>The length of both <code>num1</code> and <code>num2</code> is &lt; 110.</li>
+<li>Both <code>num1</code> and <code>num2</code> contain only digits <code>0-9</code>.</li>
+<li>Both <code>num1</code> and <code>num2</code> do not contain any leading zero, except the number 0 itself.</li>
+<li>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</li>
+</ol>
+<p><strong>My Solution:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">func multiply(num1 string, num2 string) string &#123;</span><br><span class="line">	len_1 := len(num1)</span><br><span class="line">	len_2 := len(num2)</span><br><span class="line">	//lookuptable</span><br><span class="line">	var vtable [10][10]int</span><br><span class="line">	for i := 0; i &lt; 10; i++ &#123;</span><br><span class="line">		for j := 0; j &lt; 10; j++ &#123;</span><br><span class="line">			vtable[i][j] = i * j</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//calc each number of num2 * num1</span><br><span class="line">	caltable := make([]int, len_1+len_2, len_1+len_2)</span><br><span class="line">	for j, n2 := range num2 &#123;</span><br><span class="line">		roundi := caltable[j+1 : len_1+j+1]</span><br><span class="line">		for i, n1 := range num1 &#123;</span><br><span class="line">			roundi[i] = roundi[i] + vtable[n1-48][n2-48]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//carry bit</span><br><span class="line">	ret := make([]rune, len_1+len_2)</span><br><span class="line">	for i := len_1 + len_2 - 1; i &gt; 0; i-- &#123;</span><br><span class="line">		caltable[i-1] = caltable[i-1] + int(caltable[i]/10)</span><br><span class="line">		caltable[i] = caltable[i] % 10</span><br><span class="line">		ret[i] = rune(caltable[i] + 48)</span><br><span class="line">	&#125;</span><br><span class="line">	ret[0] = rune(caltable[0] + 48)</span><br><span class="line"></span><br><span class="line">	//remove leading 0</span><br><span class="line">	start := 0</span><br><span class="line">	for i, chr := range ret &#123;</span><br><span class="line">		if chr != 48 &#123;</span><br><span class="line">			start = i</span><br><span class="line">			break</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			start++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if start == len_1+len_2 &#123;</span><br><span class="line">		start = len_1 + len_2 - 1</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return string(ret[start:])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="http://www.brendangregg.com/blog/2019-07-15/bpf-performance-tools-book.html" target="_blank" rel="noopener">BPF Performance Tools: Linux System and Application Observability (book)</a></p>
+<p><img src="http://www.brendangregg.com/blog/images/2019/bpfperftools_bookcover_500.png" alt="封面"></p>
+<ul>
+<li><p>推荐即将发行(2019-11-4)的新书，作者Brendan Gregg是Netflix的高级性能工程师，也是bpf（ebpf）的主要贡献者。</p>
+</li>
+<li><p>BPF是动态跟踪的代表，排查问题的利器。</p>
+</li>
+<li><p>本书主要讲解使用BPF进行各种场景的性能分析，覆盖CPU、memory、disks、file system、networking、<br>不同开发语言、应用如mysql、容器、虚拟化等。</p>
+</li>
+<li><p>BPF开发很繁琐，本书重点推荐高级语言前端工具BCC和bpftrace，bpftrace已经在Netflix、Facebook和Shopify等公司用于生产分析。</p>
+</li>
+<li><p>这本书号称是Linux可观察性新时代的开始，在生产中拥有轻松查看任何东西的能力。</p>
+</li>
+</ul>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><p>Golang中 int转string，主要有三种方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a. strconv.Itoa, str := strconv.Itoa(i)</span><br><span class="line">b. strconv.FormatInt, str := strconv.FormatInt(i, 10)</span><br><span class="line">c. fmt.Sprintf,  str := fmt.Sprintf(&quot;%d&quot;, i)</span><br></pre></td></tr></table></figure>
+<p>a和b是等效的，c方法性能略低，建议使用a.</p>
+<p>看下简化后源码：</p>
+<p>Itoa和FormatInt方法位于strconv/itoa.go</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">const digits = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</span><br><span class="line">const smallsString = &quot;00010203040506070809&quot; +</span><br><span class="line">    &quot;10111213141516171819&quot; +</span><br><span class="line">    &quot;20212223242526272829&quot; +</span><br><span class="line">    &quot;30313233343536373839&quot; +</span><br><span class="line">    &quot;40414243444546474849&quot; +</span><br><span class="line">    &quot;50515253545556575859&quot; +</span><br><span class="line">    &quot;60616263646566676869&quot; +</span><br><span class="line">    &quot;70717273747576777879&quot; +</span><br><span class="line">    &quot;80818283848586878889&quot; +</span><br><span class="line">    &quot;90919293949596979899&quot;</span><br><span class="line"></span><br><span class="line">func Itoa(i int) string &#123;</span><br><span class="line">    return FormatInt(int64(i), 10)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func FormatInt(i int64, base int) string &#123;</span><br><span class="line">    //小于100直接查表优化处理</span><br><span class="line">    if 0 &lt;= i &amp;&amp; i &lt; nSmalls &amp;&amp; base == 10 &#123;</span><br><span class="line">        return small(int(i))</span><br><span class="line">    &#125;</span><br><span class="line">    _, s := formatBits(nil, uint64(i), base, i &lt; 0, false)</span><br><span class="line">    return s</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// small returns the string for an i with 0 &lt;= i &lt; nSmalls.</span><br><span class="line">func small(i int) string &#123;</span><br><span class="line">    if i &lt; 10 &#123;</span><br><span class="line">        return digits[i : i+1]</span><br><span class="line">    &#125;</span><br><span class="line">    return smallsString[i*2 : i*2+2]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func formatBits(dst []byte, u uint64, base int, neg, append_ bool) (d []byte, s string) &#123;</span><br><span class="line">    var a [64 + 1]byte // +1 for sign of 64bit value in base 2</span><br><span class="line">    i := len(a)</span><br><span class="line"></span><br><span class="line">    if neg &#123;</span><br><span class="line">        u = -u</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // u guaranteed to fit into a uint</span><br><span class="line">    us := uint(u)</span><br><span class="line">    //从尾向前每两位查表，把对应str值赋值给a数组</span><br><span class="line">    for us &gt;= 100 &#123;</span><br><span class="line">        is := us % 100 * 2</span><br><span class="line">        us /= 100</span><br><span class="line">        i -= 2</span><br><span class="line">        a[i+1] = smallsString[is+1]</span><br><span class="line">        a[i+0] = smallsString[is+0]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // us &lt; 100 最前1-2位处理</span><br><span class="line">    is := us * 2</span><br><span class="line">    i--</span><br><span class="line">    a[i] = smallsString[is+1]</span><br><span class="line">    if us &gt;= 10 &#123;</span><br><span class="line">        i--</span><br><span class="line">        a[i] = smallsString[is]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // add sign, if any</span><br><span class="line">    if neg &#123;</span><br><span class="line">        i--</span><br><span class="line">        a[i] = &apos;-&apos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //反甲字符串</span><br><span class="line">    s = string(a[i:])</span><br><span class="line">    return</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>fmt.Sprintf转int核心方法位于fmt/format.go</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string) </span><br><span class="line"></span><br><span class="line">buf := f.intbuf[0:]</span><br><span class="line">i := len(buf)</span><br><span class="line">for u &gt;= 10 &#123;</span><br><span class="line">    i--</span><br><span class="line">    next := u / 10</span><br><span class="line">    buf[i] = byte(&apos;0&apos; + u - next*10)</span><br><span class="line">    u = next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果自己实现一个可参考一下。</p>
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p>分享一个技术文章：<a href="https://juejin.im/post/5d9e935f51882558b77d3200" target="_blank" rel="noopener">微信在Github开源了Hardcoder，对Android开发者有什么影响？</a></p>
+<p>Hardcoder提供了一个APP和系统之间的通讯框架，可以告诉系统需要哪些资源。扩展开来，如果各个系统都能够动态地交换资源需求和使用情况，系统调度算法就能够更好优化，从而达到更好的系统利用率。期待PC端也有类似框架。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/11/15/Arts-week001/" data-id="ck2zk44vz0000jw5548yxf3wg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/15/Arts-week002/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week002</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week002/">Arts-week002</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week003/">Arts-week003</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week004/">Arts-week004</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week005/">Arts-week005</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

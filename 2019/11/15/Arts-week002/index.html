@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week002 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0021.Algorithm Median of Two Sorted Arrays  There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity sho">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week002">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Arts-week002&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0021.Algorithm Median of Two Sorted Arrays  There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity sho">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-11-15T03:02:16.820Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week002" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/15/Arts-week002/" class="article-date">
+  <time datetime="2019-11-15T03:02:16.820Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week002
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-002"><a href="#Arts-002" class="headerlink" title="Arts-002"></a>Arts-002</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="4">
+<li><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank" rel="noopener">Median of Two Sorted Arrays</a></li>
+</ol>
+<p>There are two sorted arrays <strong>nums1</strong> and <strong>nums2</strong> of size m and n respectively.</p>
+<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+<p>You may assume <strong>nums1</strong> and <strong>nums2</strong> cannot be both empty.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">The median is 2.0</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">The median is (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
+
+<p><strong>My Solution:</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">updatePrevLastValue</span><span class="params">(arr []<span class="keyword">int</span>, pos <span class="keyword">int</span>, prevLast []<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> pos &gt;= <span class="number">2</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; pos <span class="number">-2</span> &amp;&amp; arr[pos<span class="number">-2</span>] &gt; prevLast[<span class="number">0</span>] &#123;</span><br><span class="line">			prevLast[<span class="number">0</span>] = arr[pos<span class="number">-2</span>]</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; pos <span class="number">-1</span> &amp;&amp; arr[pos <span class="number">-1</span>] &gt; prevLast[<span class="number">1</span>] &#123;</span><br><span class="line">			<span class="keyword">if</span> prevLast[<span class="number">0</span>] &lt; prevLast[<span class="number">1</span>] &#123;</span><br><span class="line">				prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">			&#125;</span><br><span class="line">			prevLast[<span class="number">1</span>] = arr[pos <span class="number">-1</span>]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> pos &gt;=<span class="number">1</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; pos <span class="number">-1</span> &amp;&amp; arr[pos <span class="number">-1</span>] &gt; prevLast[<span class="number">1</span>] &#123;</span><br><span class="line">			<span class="keyword">if</span> prevLast[<span class="number">0</span>] &gt;= prevLast[<span class="number">1</span>] &#123;</span><br><span class="line">				prevLast[<span class="number">1</span>] = arr[pos<span class="number">-1</span>]</span><br><span class="line">				prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">				prevLast[<span class="number">1</span>] = arr[pos<span class="number">-1</span>]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">updateLastValueCur</span><span class="params">(prevLast [] <span class="keyword">int</span>, curValue <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> curValue &gt; prevLast[<span class="number">1</span>] &#123;</span><br><span class="line">		prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">		prevLast[<span class="number">1</span>] = curValue</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> curValue &gt; prevLast[<span class="number">0</span>] &#123;</span><br><span class="line">		prevLast[<span class="number">0</span>] = curValue</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uptdateNexValue</span><span class="params">(prev_last []<span class="keyword">int</span>, arr []<span class="keyword">int</span>, pos <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; pos &amp;&amp; pos &gt;= <span class="number">0</span>&#123;</span><br><span class="line">		updateLastValueCur(prev_last, arr[pos])</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">binarySearchPos</span><span class="params">(arr []<span class="keyword">int</span>, maxPos <span class="keyword">int</span>, val <span class="keyword">int</span>)</span> <span class="title">int</span></span>&#123;</span><br><span class="line">	arr = arr[:maxPos]</span><br><span class="line">	valPos := <span class="number">0</span></span><br><span class="line">	low := <span class="number">1</span></span><br><span class="line">	mid := <span class="number">0</span></span><br><span class="line">	high := <span class="built_in">len</span>(arr)</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> low &gt; high &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		mid = (low + high)/<span class="number">2</span></span><br><span class="line">		guess := arr[mid<span class="number">-1</span>]</span><br><span class="line">		<span class="keyword">if</span> guess &lt; val &#123;</span><br><span class="line">			valPos += mid</span><br><span class="line">			arr=arr[mid:]</span><br><span class="line">			high = <span class="built_in">len</span>(arr)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> guess &gt; val &#123;</span><br><span class="line">			high = high / <span class="number">2</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			valPos += mid</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> <span class="built_in">len</span>(arr) == <span class="number">0</span> &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> arr[<span class="number">0</span>] &gt; val &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	repeatNums := <span class="number">0</span></span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; mid &#123;</span><br><span class="line">		<span class="keyword">for</span> _, nextValue := <span class="keyword">range</span> (arr[mid:]) &#123;</span><br><span class="line">			<span class="keyword">if</span> nextValue == val &#123;</span><br><span class="line">				repeatNums += <span class="number">1</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	valPos += repeatNums</span><br><span class="line">	<span class="keyword">return</span> valPos</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">judgePos</span><span class="params">(findPos <span class="keyword">int</span>, finalPos <span class="keyword">int</span>, arr []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(arr) == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	l1 := <span class="keyword">int</span>((<span class="built_in">len</span>(arr) + <span class="number">1</span>)/<span class="number">2</span>)</span><br><span class="line">	step := (finalPos - findPos)/<span class="number">2</span></span><br><span class="line">	<span class="keyword">if</span> l1 &gt;= step &#123;</span><br><span class="line">		l1 = step</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> l1 &lt; <span class="number">1</span> &#123;</span><br><span class="line">		l1 = <span class="number">1</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>  l1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">findMedianSortedArrays</span><span class="params">(nums1 []<span class="keyword">int</span>, nums2 []<span class="keyword">int</span>)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">	<span class="keyword">const</span> INT_MAX = <span class="keyword">int</span>(^<span class="keyword">uint</span>(<span class="number">0</span>) &gt;&gt; <span class="number">1</span>)</span><br><span class="line">	<span class="keyword">const</span> INT_MIN = ^(INT_MAX)</span><br><span class="line">	finalPos := <span class="keyword">int</span>((<span class="built_in">len</span>(nums1) + <span class="built_in">len</span>(nums2) + <span class="number">1</span>)/<span class="number">2</span>)<span class="comment">//last position</span></span><br><span class="line">	prevLast := []<span class="keyword">int</span>&#123;INT_MIN,INT_MIN&#125; <span class="comment">//prev last max values</span></span><br><span class="line">	nextValue := INT_MAX<span class="comment">//tmp value</span></span><br><span class="line">	findPos := <span class="number">0</span> <span class="comment">//current pos</span></span><br><span class="line">	nextPos := <span class="number">0</span> <span class="comment">//next arr remove pos</span></span><br><span class="line">	diffPos := findPos - finalPos</span><br><span class="line"></span><br><span class="line">	twoNum := <span class="literal">false</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">len</span>(nums1) + <span class="built_in">len</span>(nums2)) % <span class="number">2</span> == <span class="number">0</span> &#123;</span><br><span class="line">		twoNum = <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//define l1 position and l2 postion</span></span><br><span class="line">	l1 := <span class="number">0</span></span><br><span class="line">	l2 := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> <span class="built_in">len</span>(nums2) == <span class="number">0</span> &#123;</span><br><span class="line">			updatePrevLastValue(nums1, finalPos-findPos, prevLast)</span><br><span class="line">			uptdateNexValue(prevLast, nums1, finalPos-findPos)</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> <span class="built_in">len</span>(nums1) == <span class="number">0</span> &#123;</span><br><span class="line">			updatePrevLastValue(nums2, finalPos-findPos, prevLast)</span><br><span class="line">			uptdateNexValue(prevLast, nums2, finalPos-findPos)</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		l1 = judgePos(findPos, finalPos, nums1)</span><br><span class="line">		l2 = judgePos(findPos, finalPos, nums2)</span><br><span class="line"></span><br><span class="line">		<span class="comment">//exchange arr if value1 &gt; value2</span></span><br><span class="line">		<span class="keyword">if</span> nums1[l1 - <span class="number">1</span>] &gt; nums2[l2 - <span class="number">1</span>] &#123;</span><br><span class="line">			nums1, nums2 = nums2, nums1</span><br><span class="line">			l1, l2 = l2,l1</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		diffPos = findPos + l1 + l2 <span class="number">-1</span> - finalPos</span><br><span class="line">		<span class="keyword">if</span> diffPos == <span class="number">0</span> &#123;</span><br><span class="line">			prevLast[<span class="number">0</span>] = nums1[l1<span class="number">-1</span>]</span><br><span class="line">			<span class="keyword">if</span> <span class="built_in">len</span>(nums1) &gt; l1 &#123;</span><br><span class="line">				nextValue = nums1[l1]</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> nextValue &gt; nums2[l2<span class="number">-1</span>] &#123;</span><br><span class="line">				nextValue = nums2[l2 <span class="number">-1</span>]</span><br><span class="line">			&#125;</span><br><span class="line">			prevLast[<span class="number">1</span>] = nextValue</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> diffPos == <span class="number">1</span> &#123;</span><br><span class="line">			prevLast[<span class="number">0</span>] = prevLast[<span class="number">1</span>]</span><br><span class="line">			prevLast[<span class="number">1</span>] = nums1[l1<span class="number">-1</span>]</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> diffPos &gt; <span class="number">1</span> &#123;</span><br><span class="line">			<span class="built_in">panic</span>(<span class="string">"should not execute here"</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> diffPos &lt; <span class="number">0</span> &#123;</span><br><span class="line">			findPos += l1</span><br><span class="line">			updatePrevLastValue(nums1, l1 ,prevLast)</span><br><span class="line">			nextPos = binarySearchPos(nums2, l2, nums1[l1<span class="number">-1</span>])</span><br><span class="line">			<span class="keyword">if</span> nextPos &gt;<span class="number">0</span> &#123;</span><br><span class="line">				findPos += nextPos</span><br><span class="line">				updatePrevLastValue(nums2, nextPos, prevLast)</span><br><span class="line">				nums2 = nums2[nextPos:]</span><br><span class="line">			&#125;</span><br><span class="line">			nums1 = nums1[l1:]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> !twoNum &#123;</span><br><span class="line">		prevLast[<span class="number">1</span>] = prevLast[<span class="number">0</span>]</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">float64</span>(prevLast[<span class="number">0</span>]+prevLast[<span class="number">1</span>])/<span class="number">2.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://towardsdatascience.com/machine-translation-a-short-overview-91343ff39c9f" target="_blank" rel="noopener">Machine Translation: A Short Overview</a><br><strong>本文列举了机器翻译的3个阶段：</strong></p>
+<ul>
+<li><p>基于规则的机器翻译 (RBMT): 1970s-1990s</p>
+<ul>
+<li>优点：<ul>
+<li>不需要双语文本</li>
+<li>领域无关</li>
+<li>完全控制（每种情况下都可能有新规则对应）</li>
+<li>可重用性（当与新语言配对时，语言的现有规则可以被转移）</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>需要好的字典</li>
+<li>手动设置规则（需要专业知识）</li>
+<li>规则越多，系统处理就越困难</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>基于统计学的机器翻译(SMT): 1990s-2010s</p>
+<ul>
+<li>优点：<ul>
+<li>语言专家手工工作较少</li>
+<li>适合许多语言词对场景(基于Bayes统计)</li>
+<li>减少字典外翻译，使用合适语言模型可使翻译更流畅</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>需要双语语料库</li>
+<li>特定错误很难修复</li>
+<li>不太适合单词顺序差异较大的语言对需要好的字典</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>基于深度网络机器翻译(NMT): 2014-至今</p>
+<ul>
+<li><p>优点：</p>
+<ul>
+<li>端到端模型（没有特定任务的流程）</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>需要双语语料库</li>
+<li>稀有字问题</li>
+</ul>
+<p>文中分别介绍了各个阶段一些代表性软件和优缺点。如Apertium是RBMT开源软件的代表，Moses是SMT开源软件，基于神经网络就非OpenNMT莫属了。<br>本文是机器翻译的入门导读，给了不少参考链接，有兴趣的可以了解一下。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><p>interface类型定义了一组方法，如果某个对象实现了某个接口的所有方法，则此对象就实现了此接口。<br>所以任意的类型都实现了空interface(interface{})，也就是包含0个method的interface。那如何根据变量确定变量类型呢？主要有两种：</p>
+<ul>
+<li>断言类型变量 value, ok = ele.(T) 或 i.(type) //只能在switch中使用</li>
+<li>反射 t := reflect.TypeOf(var) </li>
+</ul>
+<p>再看实现了String方法的接口：<br>fmt/print.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Stringer is implemented by any value that has a String method,</span></span><br><span class="line"><span class="comment">// which defines the ``native'' format for that value.</span></span><br><span class="line"><span class="comment">// The String method is used to print values passed as an operand</span></span><br><span class="line"><span class="comment">// to any format that accepts a string or to an unformatted printer</span></span><br><span class="line"><span class="comment">// such as Print.</span></span><br><span class="line"><span class="keyword">type</span> Stringer <span class="keyword">interface</span> &#123;</span><br><span class="line">	String() <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>String()相当于Java的toString方法，写个简单的例子</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Animal <span class="keyword">interface</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Dog <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    color <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Cat <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    color <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实现fmt.Stringer相当于Java的toString方法</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(d Dog)</span> <span class="title">String</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"["</span> + d.name + <span class="string">": "</span> + d.color + <span class="string">"]"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	dog1 := Dog&#123;<span class="string">"Dog Army"</span>, <span class="string">"Brown"</span>&#125;</span><br><span class="line">	cat1 := Cat&#123;<span class="string">"Cat Bob"</span>, <span class="string">"Red"</span>&#125;</span><br><span class="line">	fmt.Println(dog1)</span><br><span class="line">	fmt.Println(cat1)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">type</span> List [] Animal</span><br><span class="line">	animals := <span class="built_in">make</span>(List, <span class="number">2</span>)</span><br><span class="line">	animals[<span class="number">0</span>] = cat1</span><br><span class="line">	animals[<span class="number">1</span>] = dog1</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> _, animal := <span class="keyword">range</span> animals&#123;</span><br><span class="line">		<span class="keyword">switch</span> value := animal.(<span class="keyword">type</span>) &#123;</span><br><span class="line">		<span class="keyword">case</span> Cat:</span><br><span class="line">			fmt.Println(value, <span class="string">" is a cat"</span>)</span><br><span class="line">		<span class="keyword">case</span> Dog:</span><br><span class="line">			fmt.Println(value, <span class="string">" is a Dog"</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> value,ok := animals[<span class="number">0</span>].(Cat);ok &#123;</span><br><span class="line">		fmt.Println(value, <span class="string">" is a cat"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	v := reflect.ValueOf(dog1)</span><br><span class="line">	fmt.Println(<span class="string">"type:"</span>, v.Type())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Dog Army: Brown]</span><br><span class="line">&#123;Cat Bob Red&#125;</span><br><span class="line">&#123;Cat Bob Red&#125;  is a cat</span><br><span class="line">[Dog Army: Brown]  is a Dog</span><br><span class="line">&#123;Cat Bob Red&#125;  is a cat</span><br><span class="line">type: main.Dog</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://levelup.gitconnected.com/how-to-be-a-good-senior-developer-958948e02ada" target="_blank" rel="noopener">How to Be a Good Senior Developer</a> - It’s not what you do—it’s how you do it</p>
+<p><strong>Commit mistake, correct mistake, learn from mistake, share mistake—repeat.</strong><br>犯错误，改正错误，从错误中学习，分享错误，重复。</p>
+<p><strong>A senior developer is a person who can bring in 10x more value to the company. These are developers who know how “good stuff” works and can deliver value to the customer.</strong><br>高级开发人员是指能够为公司带来10倍以上价值的人。这些开发人员知道“好东西”是如何工作的，能够为客户提供价值。</p>
+<p><strong>高级开发人员特质：</strong></p>
+<ul>
+<li>They’re Curious 好奇心</li>
+<li>They Learn Their Chosen Platform Inside Out 从内而外地学习</li>
+<li>They’re Great Mentors 他们是伟大的导师</li>
+<li>They Don’t Have “Shiny-Toy” Syndrome 他们没有“发光玩具”综合症（他们确切地知道什么时候不做某事）</li>
+<li>They Admit What They Don’t Know 承认自己不知道的</li>
+<li>They Can Detect the Smell of Bad Code 他们可以检测到错误代码的气味</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/11/15/Arts-week002/" data-id="ck2zk44w50001jw55b7t79b15" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/15/Arts-week001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arts-week001
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/15/Arts-week003/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week003</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week002/">Arts-week002</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week003/">Arts-week003</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week004/">Arts-week004</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week005/">Arts-week005</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

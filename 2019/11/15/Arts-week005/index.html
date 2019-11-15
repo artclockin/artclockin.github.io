@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week005 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0051.Algorithm 4Sum Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week005">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;Arts-week005&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0051.Algorithm 4Sum Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array w">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https:&#x2F;&#x2F;mysqlserverteam.com&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;04&#x2F;Index_File_Segment_Structure.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;miro.medium.com&#x2F;max&#x2F;2232&#x2F;1*l4gxFYEZnRhysQ_QWIVJgA.png">
+<meta property="og:updated_time" content="2019-11-15T03:02:16.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mysqlserverteam.com&#x2F;wp-content&#x2F;uploads&#x2F;2019&#x2F;04&#x2F;Index_File_Segment_Structure.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week005" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/15/Arts-week005/" class="article-date">
+  <time datetime="2019-11-15T03:02:16.820Z" itemprop="datePublished">2019-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week005
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-005"><a href="#Arts-005" class="headerlink" title="Arts-005"></a>Arts-005</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="18">
+<li><p><a href="https://leetcode.com/problems/4sum/" target="_blank" rel="noopener">4Sum</a></p>
+<p>Given an array <code>nums</code> of <em>n</em> integers and an integer <code>target</code>, are there elements <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em> in <code>nums</code> such that <em>a</em> + <em>b</em> + <em>c</em> + <em>d</em> = <code>target</code>? Find all unique quadruplets in the array which gives the sum of <code>target</code>.</p>
+<p><strong>Note:</strong></p>
+<p>The solution set must not contain duplicate quadruplets.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.</span><br><span class="line"></span><br><span class="line">A solution set is:</span><br><span class="line">[</span><br><span class="line">  [-1,  0, 0, 1],</span><br><span class="line">  [-2, -1, 1, 2],</span><br><span class="line">  [-2,  0, 0, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>*<em>My Solution1 - 使用map *</em></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fourSum</span><span class="params">(nums []<span class="keyword">int</span>, target <span class="keyword">int</span>)</span> [][]<span class="title">int</span></span> &#123;</span><br><span class="line">	result:= [][]<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	l_nums :=  <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">if</span> l_nums &lt; <span class="number">4</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sort.Ints(nums)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i, x := <span class="keyword">range</span> nums[:l_nums<span class="number">-3</span>] &#123;</span><br><span class="line">		<span class="keyword">if</span> i &gt;<span class="number">0</span> &amp;&amp; x == nums[i<span class="number">-1</span>] &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> j, y := <span class="keyword">range</span> nums[i+<span class="number">1</span>: l_nums <span class="number">-2</span>] &#123;</span><br><span class="line">			<span class="keyword">if</span> j &gt;<span class="number">0</span> &amp;&amp; y == nums[i + j] &#123;</span><br><span class="line">				<span class="keyword">continue</span></span><br><span class="line">			&#125;</span><br><span class="line">			m := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>)</span><br><span class="line">			bFirst := <span class="literal">true</span></span><br><span class="line">			<span class="keyword">for</span> k ,z := <span class="keyword">range</span> nums[i + j + <span class="number">2</span> :] &#123;</span><br><span class="line">				<span class="keyword">if</span> k &gt; <span class="number">0</span> &amp;&amp; z == nums[i + j + k + <span class="number">1</span>]&#123;</span><br><span class="line">					<span class="keyword">if</span> bFirst &#123;</span><br><span class="line">						<span class="keyword">if</span> target - x - y - z == z &#123;</span><br><span class="line">							result = <span class="built_in">append</span>(result, []<span class="keyword">int</span>&#123;x,y,target-x-y-z,z&#125;)</span><br><span class="line">							bFirst = <span class="literal">false</span></span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">continue</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> _, ok := m[z]; ok &#123;</span><br><span class="line">					result = <span class="built_in">append</span>(result, []<span class="keyword">int</span>&#123;x,y,target-x-y-z,z&#125;)</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					m[target-x-y-z] = <span class="number">1</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"> 	<span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>*<em>My Solution2 *</em></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fourSum</span><span class="params">(nums []<span class="keyword">int</span>, target <span class="keyword">int</span>)</span> [][]<span class="title">int</span></span> &#123;</span><br><span class="line">	result:= [][]<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	l_nums :=  <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="keyword">var</span> left, right <span class="keyword">int</span></span><br><span class="line">	<span class="keyword">if</span> l_nums &lt; <span class="number">4</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sort.Ints(nums)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i, x := <span class="keyword">range</span> nums[:l_nums<span class="number">-3</span>] &#123;</span><br><span class="line">		<span class="keyword">if</span> i &gt;<span class="number">0</span> &amp;&amp; x == nums[i<span class="number">-1</span>] &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> j, y := <span class="keyword">range</span> nums[i+<span class="number">1</span>: l_nums <span class="number">-2</span>] &#123;</span><br><span class="line">			<span class="keyword">if</span> j &gt;<span class="number">0</span> &amp;&amp; y == nums[i + j] &#123;</span><br><span class="line">				<span class="keyword">continue</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			left = i +j + <span class="number">2</span></span><br><span class="line">			right = l_nums - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> left &gt;= right &#123;</span><br><span class="line">					<span class="keyword">break</span></span><br><span class="line">				&#125;</span><br><span class="line">				v := target - x - y - nums[left] - nums[right]</span><br><span class="line">				<span class="keyword">if</span> v &gt; <span class="number">0</span> &#123;</span><br><span class="line">					left++</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> v &lt; <span class="number">0</span> &#123;</span><br><span class="line">					right--</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					result = <span class="built_in">append</span>(result, []<span class="keyword">int</span>&#123;x,y,nums[left],nums[right]&#125;)</span><br><span class="line">					<span class="keyword">for</span> left &lt; right &amp;&amp; nums[left] == nums[left + <span class="number">1</span>] &#123;</span><br><span class="line">						left++</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">for</span> left &lt; right &amp;&amp; nums[right] == nums[right - <span class="number">1</span>] &#123;</span><br><span class="line">						right--</span><br><span class="line">					&#125;</span><br><span class="line">					left++</span><br><span class="line">					right--</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"> 	<span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://mysqlserverteam.com/innodb-tablespace-space-management/" target="_blank" rel="noopener">InnoDB : Tablespace Space Management</a><br>本文从介绍了表空间管理，从.IBD文件物理结构谈起，一般一个表创建一个同名的表空间（file-per-table）。</p>
+<p>Tablespace逻辑分层结构: Tablespace、Extents（连续的Pages，一般1M）、Pages （一般16LKb）。</p>
+<p>两种Page：Header Page/XDES Page(extent description page)、Inno Page(对应Segment)。</p>
+<p>File Segment是Pages和Extents的集合，每一个Innodb索引使用2个File Segment: Leaf Page Segment(B树叶子节点)和Non Leaf Page Segment(B树中间节点)。</p>
+<p>最后介绍了索引创建、删除等操作引起的表空间相关操作。</p>
+<p>全文简洁易懂，适合入门级。</p>
+<p><img src="https://mysqlserverteam.com/wp-content/uploads/2019/04/Index_File_Segment_Structure.png" alt=""></p>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><ul>
+<li><strong>Go assert</strong><br>Go test demo:<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">        <span class="string">"github.com/stretchr/testify/assert"</span></span><br><span class="line">        <span class="string">"testing"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestCalculate</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">        assert.Equal(t, Calculate(<span class="number">2</span>), <span class="number">4</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestCalculate2</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">        assert := assert.New(t)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> tests = []<span class="keyword">struct</span> &#123;</span><br><span class="line">                input    <span class="keyword">int</span></span><br><span class="line">                expected <span class="keyword">int</span></span><br><span class="line">        &#125;&#123;</span><br><span class="line">                &#123;<span class="number">2</span>, <span class="number">4</span>&#125;,</span><br><span class="line">                &#123;<span class="number">-1</span>, <span class="number">1</span>&#125;,</span><br><span class="line">                &#123;<span class="number">0</span>, <span class="number">2</span>&#125;,</span><br><span class="line">                &#123;<span class="number">-5</span>, <span class="number">-3</span>&#125;,</span><br><span class="line">                &#123;<span class="number">99999</span>, <span class="number">100001</span>&#125;,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> _, test := <span class="keyword">range</span> tests &#123;</span><br><span class="line">                assert.Equal(Calculate(test.input), test.expected)</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace" target="_blank" rel="noopener">Turn Python Scripts into Beautiful ML Tools</a> </p>
+<p>Streamlit特点：</p>
+<ol>
+<li><p>Widget当成变量处理，动态更新</p>
+</li>
+<li><p>Streamlit 每一次交互都只是自上而下重新运行脚本</p>
+</li>
+<li><p>缓存允许Streamlit跳过冗余数据获取和计算</p>
+</li>
+<li><p>Streamlit 是免费开源库，你可以本地部署 Streamlit app</p>
+</li>
+</ol>
+<p><img src="https://miro.medium.com/max/2232/1*l4gxFYEZnRhysQ_QWIVJgA.png" alt=""></p>
+<p><strong>从零开始</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ pip install --upgrade streamlit </span><br><span class="line">$ streamlit hello</span><br><span class="line">   You can now view your Streamlit app <span class="keyword">in</span> your browser.</span><br><span class="line">   Local URL: http://localhost:<span class="number">8501</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/11/15/Arts-week005/" data-id="ck2zk44we0004jw55c15s34x6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/15/Arts-week004/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arts-week004
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week002/">Arts-week002</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week003/">Arts-week003</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week004/">Arts-week004</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week005/">Arts-week005</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
