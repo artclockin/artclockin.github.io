@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week006 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0061.Algorithm Binary Tree PathsGiven a binary tree, return all root-to-leaf paths. Note: A leaf is a node with no children. Example: 1234567891011Input:   1 &#x2F;   \2     3 \  5Output: [&quot;1-&amp;gt;2-&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week006">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week006&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0061.Algorithm Binary Tree PathsGiven a binary tree, return all root-to-leaf paths. Note: A leaf is a node with no children. Example: 1234567891011Input:   1 &#x2F;   \2     3 \  5Output: [&quot;1-&amp;gt;2-&amp;g">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week006&#x2F;img&#x2F;2019-11-17-22-38-58.png">
+<meta property="og:updated_time" content="2019-12-09T10:16:36.683Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week006&#x2F;img&#x2F;2019-11-17-22-38-58.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week006" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/09/Arts-week006/" class="article-date">
+  <time datetime="2019-12-09T10:17:50.095Z" itemprop="datePublished">2019-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week006
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-006"><a href="#Arts-006" class="headerlink" title="Arts-006"></a>Arts-006</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="257">
+<li><p><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="noopener">Binary Tree Paths</a><br>Given a binary tree, return all root-to-leaf paths.</p>
+<p><strong>Note:</strong> A leaf is a node with no children.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">   <span class="number">1</span></span><br><span class="line"> /   \</span><br><span class="line"><span class="number">2</span>     <span class="number">3</span></span><br><span class="line"> \</span><br><span class="line">  <span class="number">5</span></span><br><span class="line"></span><br><span class="line">Output: [<span class="string">"1-&gt;2-&gt;5"</span>, <span class="string">"1-&gt;3"</span>]</span><br><span class="line"></span><br><span class="line">Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ol>
+<p>*<em>My Solution1 - 使用map *</em></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">travelPath</span><span class="params">(root *TreeNode, path <span class="keyword">string</span>)</span> []<span class="title">string</span></span> &#123;</span><br><span class="line">	result := []<span class="keyword">string</span>&#123;&#125;;</span><br><span class="line">	<span class="keyword">if</span> root == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> path == <span class="string">""</span> &#123;</span><br><span class="line">		path = strconv.Itoa(root.Val)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		path = path + <span class="string">"-&gt;"</span> + strconv.Itoa(root.Val)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> root.Left == <span class="literal">nil</span> &amp;&amp; root.Right == <span class="literal">nil</span> &#123;</span><br><span class="line">		result = <span class="built_in">append</span>(result, path)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> root.Left != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> _, val := <span class="keyword">range</span> travelPath(root.Left, path) &#123;</span><br><span class="line">			result = <span class="built_in">append</span>(result, val)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> root.Right != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> _, val := <span class="keyword">range</span> travelPath(root.Right, path) &#123;</span><br><span class="line">			result = <span class="built_in">append</span>(result, val)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">binaryTreePaths</span><span class="params">(root *TreeNode)</span> []<span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> travelPath(root, <span class="string">""</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://blogs.oracle.com/javamagazine/inside-the-language-sealed-types" target="_blank" rel="noopener">Inside the Language: Sealed Types</a><br><strong>How Java is moving toward pattern matching, improved enums, and better switch statements</strong></p>
+<p>本文探讨了enums</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Pet &#123;</span><br><span class="line">    CAT,</span><br><span class="line">    DOG</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$ javap –c Pet<span class="class">.<span class="keyword">class</span></span></span><br><span class="line">Compiled from "Pet.java"</span><br><span class="line"><span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Pet</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">lang</span>.<span class="title">Enum</span>&lt;<span class="title">Pet</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Pet CAT;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Pet DOG;</span><br><span class="line"></span><br><span class="line">  …</span><br><span class="line">  <span class="comment">// Private constructor</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从而引出Sealed typles。Enums是表示有限数量的实例，而Sealed typles则描述有限数量的类型。本文给出了一个例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> sealed <span class="class"><span class="keyword">class</span> <span class="title">SealedPet</span> <span class="title">permits</span> <span class="title">Cat</span>, <span class="title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">final</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SealedPet</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">SealedPet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Cat</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name +<span class="string">" says Meow"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">huntMouse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name +<span class="string">" caught a mouse"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">SealedPet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name +<span class="string">" says Woof"</span>);</span><br><span class="line">    &#125;        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pullSled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name +<span class="string">" pulled the sled"</span>);</span><br><span class="line">    &#125;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>目前sealed，permits还不是keywords。permits表示允许可能的继承类。</p>
+<p>sealed思想借鉴了其他语言如C#、Scala等，做了一定扩展。</p>
+<p>作者论述了Sealed types与switch expression结合，认为switch expression、sealed type和其他一些正在开发的JVM技术的结合进一步扩展了Java对函数式和面向对象编程风格的支持。</p>
+<p>个人感觉越像Scala了，语言特性有了很大进步，看起来给函数式编程范式催生了更多的需求。</p>
+<p>目前要试用Sealed types特性需要自己编译jdk源代码。</p>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><ul>
+<li><strong>执行函数，限定超时时间</strong><br>通过channal实现go对超时函数的限制。<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	c1 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		result := LongTask()</span><br><span class="line">		c1 &lt;- result</span><br><span class="line">	&#125;()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">select</span> &#123;</span><br><span class="line">	<span class="keyword">case</span> res := &lt;-c1:</span><br><span class="line">		fmt.Println(res)</span><br><span class="line">	<span class="keyword">case</span> &lt;-time.After(<span class="number">2</span> * time.Second):</span><br><span class="line">		fmt.Println(<span class="string">"timeout"</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">LongTask</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	time.Sleep(<span class="number">3</span> * time.Second)</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"long task done"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://www.cnblogs.com/feffery/p/11842798.html" target="_blank" rel="noopener">在Python中制作个性化词云图</a> </p>
+<p>文章介绍了采用wordcloud包如何生成词云，并自定义地图蒙版，调整参数效果。同时介绍了stylecloud包绘制词云方法。</p>
+<p><img src="img/2019-11-17-22-38-58.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/12/09/Arts-week006/" data-id="ck3yabr5u00047h5548iaduuf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/09/Arts-week007/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week007</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week006/">Arts-week006</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week007/">Arts-week007</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week008/">Arts-week008</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week009/">Arts-week009</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

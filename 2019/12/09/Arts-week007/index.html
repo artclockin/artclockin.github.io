@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week007 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0071.Algorithm Lowest Common Ancestor of a Binary Tree  Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week007">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week007&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0071.Algorithm Lowest Common Ancestor of a Binary Tree  Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the definition of LCA on Wikipedia:">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week007&#x2F;img&#x2F;2019-11-22-21-37-41.png">
+<meta property="og:updated_time" content="2019-12-09T10:16:36.683Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2019&#x2F;12&#x2F;09&#x2F;Arts-week007&#x2F;img&#x2F;2019-11-22-21-37-41.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week007" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/09/Arts-week007/" class="article-date">
+  <time datetime="2019-12-09T10:17:50.095Z" itemprop="datePublished">2019-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week007
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-007"><a href="#Arts-007" class="headerlink" title="Arts-007"></a>Arts-007</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="236">
+<li><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank" rel="noopener">Lowest Common Ancestor of a Binary Tree</a></li>
+</ol>
+<p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank" rel="noopener">definition of LCA on Wikipedia</a>: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
+<p>Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]<br><img src="img/2019-11-22-21-37-41.png" alt=""></p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The LCA of nodes 5 and 1 is 3.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4</span><br><span class="line">Output: 5</span><br><span class="line">Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li><p>All of the nodes’ values will be unique.</p>
+</li>
+<li><p>p and q are different and both values will exist in the binary tree.</p>
+<p>​    </p>
+</li>
+</ul>
+<p><strong>My Solution</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">lowestCommonAncestor</span><span class="params">(root, p, q *TreeNode)</span> *<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> root == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> root.Val == p.Val || root.Val == q.Val &#123;</span><br><span class="line">		<span class="keyword">return</span> root</span><br><span class="line">	&#125;</span><br><span class="line">	leftNode := lowestCommonAncestor(root.Left, p, q)</span><br><span class="line">	rightNode := lowestCommonAncestor(root.Right, p, q)</span><br><span class="line">	<span class="keyword">if</span> leftNode == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> rightNode</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> rightNode == <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> leftNode</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> root</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://medium.com/swlh/efficiently-checking-for-an-empty-list-in-python-76b76099fbd3" target="_blank" rel="noopener">Efficiently Checking for an Empty List in Python</a><br><strong>Python判断列表为空的方法</strong></p>
+<p>本文探讨了3张判断列表为空的方法，通过dis模块分析bytecode之间的区别，并给出建议。适合Python优化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">explicit_list</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> a == []:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">explicit_len</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> len(a) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">implicit_bool</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> a:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">explicit_list：</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> dis</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">explicit_list</span><span class="params">(a)</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">if</span> a == []:</span><br><span class="line"><span class="meta">... </span>        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>dis.dis(explicit_list)</span><br><span class="line">  <span class="number">2</span>           <span class="number">0</span> LOAD_FAST                <span class="number">0</span> (a)</span><br><span class="line">              <span class="number">2</span> BUILD_LIST               <span class="number">0</span></span><br><span class="line">              <span class="number">4</span> COMPARE_OP               <span class="number">2</span> (==)</span><br><span class="line">              <span class="number">6</span> POP_JUMP_IF_FALSE       <span class="number">12</span></span><br><span class="line">  <span class="number">3</span>           <span class="number">8</span> LOAD_CONST               <span class="number">1</span> (<span class="literal">True</span>)</span><br><span class="line">             <span class="number">10</span> RETURN_VALUE</span><br><span class="line">  <span class="number">4</span>     &gt;&gt;   <span class="number">12</span> LOAD_CONST               <span class="number">2</span> (<span class="literal">False</span>)</span><br><span class="line">             <span class="number">14</span> RETURN_VALUE</span><br><span class="line">这是复杂，效率最低的方案</span><br><span class="line"></span><br><span class="line">explicit_len：</span><br><span class="line"> ...     <span class="keyword">if</span> len(a) == <span class="number">0</span>:</span><br><span class="line">  <span class="number">2</span>           <span class="number">0</span> LOAD_GLOBAL              <span class="number">0</span> (len)</span><br><span class="line">              <span class="number">2</span> LOAD_FAST                <span class="number">0</span> (a)</span><br><span class="line">              <span class="number">4</span> CALL_FUNCTION            <span class="number">1</span></span><br><span class="line">              <span class="number">6</span> LOAD_CONST               <span class="number">1</span> (<span class="number">0</span>)</span><br><span class="line">              <span class="number">8</span> COMPARE_OP               <span class="number">2</span> (==)</span><br><span class="line">             <span class="number">10</span> POP_JUMP_IF_FALSE       <span class="number">16</span>        </span><br><span class="line">需要调用len函数，性能略读低</span><br><span class="line"></span><br><span class="line">implicit_bool：</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">if</span> a:</span><br><span class="line">  <span class="number">2</span>           <span class="number">0</span> LOAD_FAST                <span class="number">0</span> (a)</span><br><span class="line">              <span class="number">2</span> POP_JUMP_IF_FALSE        <span class="number">8</span></span><br><span class="line">效率最高</span><br></pre></td></tr></table></figure>
+<p>PEP8 Style Guide 建议：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">For sequences, (strings, lists, tuples), use the fact that empty sequences are false.</span><br><span class="line">Yes: <span class="keyword">if</span> <span class="keyword">not</span> seq:</span><br><span class="line">     <span class="keyword">if</span> seq:</span><br><span class="line"></span><br><span class="line">No:  <span class="keyword">if</span> len(seq):</span><br><span class="line">     <span class="keyword">if</span> <span class="keyword">not</span> len(seq):</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><ul>
+<li><p><strong>Go Error Wrapping(1.13)</strong> </p>
+<ul>
+<li><strong>如何生成一个 Wrapping Error</strong><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">e := errors.New(<span class="string">"原始错误e"</span>)</span><br><span class="line">w := fmt.Errorf(<span class="string">"Wrap错误:%w"</span>, e)</span><br><span class="line">fmt.Println(w.Error())<span class="comment">//Wrap错误:原始错误e</span></span><br><span class="line">fmt.Println(errors.Unwrap(w))<span class="comment">//原始错误e</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>Error 判断与转换</strong><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Is</span><span class="params">(err, target error)</span> <span class="title">bool</span></span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">As</span><span class="params">(err error, target <span class="keyword">interface</span>&#123;&#125;)</span> <span class="title">bool</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> err == os.ErrExist </span><br><span class="line">--&gt; </span><br><span class="line"><span class="keyword">if</span> errors.Is(err, os.ErrExist)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> perr, ok := err.(*os.PathError); ok &#123;</span><br><span class="line">    fmt.Println(perr.Path)</span><br><span class="line">&#125;</span><br><span class="line">--&gt;</span><br><span class="line"><span class="keyword">var</span> perr *os.PathError</span><br><span class="line"><span class="keyword">if</span> errors.As(err, &amp;perr) &#123;</span><br><span class="line">fmt.Println(perr.Path)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://mp.weixin.qq.com/s/ZBd1UcIJFk_DonkxVNgERA" target="_blank" rel="noopener">Go接口之nil != nil</a> </p>
+<p>Go语言中的interface是不是nil的条件，不单单是interface中的值是nil，类型还需要是nil才行。</p>
+<ul>
+<li>指针的判断，都涉及到type和value</li>
+<li>接口指针之间的判等，要基于type与value，一个不同则不等。</li>
+<li>接口指针与其对应实现的结构体指针，可以进行判等操作。</li>
+</ul>
+<p><a href="https://golang.org/doc/faq" target="_blank" rel="noopener">Go faq</a> 很值得学习</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">Example:</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"reflect"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> IA <span class="keyword">interface</span> &#123;</span><br><span class="line">	Print()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> A <span class="keyword">struct</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(*A)</span> <span class="title">Print</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello A"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetA</span><span class="params">()</span> <span class="title">IA</span></span>  &#123;</span><br><span class="line">	<span class="keyword">var</span> a *A = <span class="literal">nil</span></span><br><span class="line">	<span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>  &#123;</span><br><span class="line">	a := GetA()</span><br><span class="line">	<span class="keyword">if</span> a != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">"a!=nil a.type:%v, a.value:%v, a type:%v\n"</span>,reflect.TypeOf(a), reflect.ValueOf(a),reflect.TypeOf(a).Kind())</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> b <span class="keyword">interface</span>&#123;&#125; = <span class="literal">nil</span></span><br><span class="line">	fmt.Printf(<span class="string">"b.type:%v, b.value:%v\n"</span>,reflect.TypeOf(b), reflect.ValueOf(b))</span><br><span class="line">	<span class="keyword">if</span> b == <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">"b==nil"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">a!=<span class="literal">nil</span> a.<span class="keyword">type</span>:*main.A, a.value:&lt;<span class="literal">nil</span>&gt;, a <span class="keyword">type</span>:ptr</span><br><span class="line">b.<span class="keyword">type</span>:&lt;<span class="literal">nil</span>&gt;, b.value:&lt;invalid reflect.Value&gt;</span><br><span class="line">b==<span class="literal">nil</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2019/12/09/Arts-week007/" data-id="ck3yabr5w00057h55hoka77qx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/09/Arts-week006/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arts-week006
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/09/Arts-week008/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week008</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week006/">Arts-week006</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week007/">Arts-week007</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week008/">Arts-week008</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week009/">Arts-week009</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/Arts-week001/">Arts-week001</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
