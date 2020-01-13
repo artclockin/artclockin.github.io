@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week012 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0121.Algorithm Kth Largest Element in an Array  Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. Examp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week012">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2020&#x2F;01&#x2F;13&#x2F;Arts-week012&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0121.Algorithm Kth Largest Element in an Array  Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. Examp">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2020-01-13T10:34:13.168Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week012" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/13/Arts-week012/" class="article-date">
+  <time datetime="2020-01-13T10:34:13.168Z" itemprop="datePublished">2020-01-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week012
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-012"><a href="#Arts-012" class="headerlink" title="Arts-012"></a>Arts-012</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="215">
+<li><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener">Kth Largest Element in an Array</a></li>
+</ol>
+<p>Find the <strong>k</strong>th largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,1,5,6,4] and k = 2</span><br><span class="line">Output: 5</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,3,1,2,4,5,5,6] and k = 4</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong><br>You may assume k is always valid, 1 ≤ k ≤ array’s length.</p>
+<p><strong>My Solution:</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> NHeap <span class="keyword">struct</span>&#123;</span><br><span class="line">	maxSize <span class="keyword">int</span></span><br><span class="line">	heap  []<span class="keyword">int</span></span><br><span class="line">	size   <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">CreateHeap</span> <span class="params">(nums []<span class="keyword">int</span>,k <span class="keyword">int</span>)</span> *<span class="title">NHeap</span></span>&#123;</span><br><span class="line">	nHeap  := &amp;NHeap&#123;k,[]<span class="keyword">int</span>&#123;&#125;,<span class="number">0</span>&#125;</span><br><span class="line">	<span class="keyword">return</span> nHeap</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(n *NHeap)</span> <span class="title">add</span> <span class="params">(val <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> n.size &lt; n.maxSize&#123;</span><br><span class="line">		n.heap = <span class="built_in">append</span>(n.heap,val)</span><br><span class="line">		n.size++</span><br><span class="line">		n.heapUp(n.size<span class="number">-1</span>)</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> val &gt; n.heap[<span class="number">0</span>]&#123;</span><br><span class="line">			n.heap[<span class="number">0</span>] = val</span><br><span class="line">			n.heapDown(<span class="number">0</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(n *NHeap)</span> <span class="title">swap</span><span class="params">(x,y <span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">	<span class="comment">// swap heap node value</span></span><br><span class="line">	n.heap[x],n.heap[y] = n.heap[y],n.heap[x]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(n *NHeap)</span> <span class="title">heapUp</span><span class="params">(index <span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> index &gt; <span class="number">0</span> &amp;&amp; n.heap[(index<span class="number">-1</span>)/<span class="number">2</span>] &gt; n.heap[index] &#123;</span><br><span class="line">		n.swap(index,(index<span class="number">-1</span>)/<span class="number">2</span>)</span><br><span class="line">		index = (index<span class="number">-1</span>)/<span class="number">2</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(n *NHeap)</span> <span class="title">heapDown</span><span class="params">(index <span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> index &lt; n.size<span class="number">-1</span>&#123;</span><br><span class="line">		left := <span class="number">2</span>*index +<span class="number">1</span></span><br><span class="line">		right := left +<span class="number">1</span></span><br><span class="line"></span><br><span class="line">		min := index</span><br><span class="line">		<span class="keyword">if</span> left &lt;n.size &amp;&amp; n.heap[left ] &lt; n.heap[index]&#123;</span><br><span class="line">			min = left</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> right &lt;n.size &amp;&amp; n.heap[right]&lt; n.heap[min]&#123;</span><br><span class="line">			min = right</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> min != index&#123;</span><br><span class="line">			n.swap(min,index)</span><br><span class="line">			index = min</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">findKthLargest</span><span class="params">(nums []<span class="keyword">int</span>, k <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	m:=CreateHeap(nums,k)</span><br><span class="line">	<span class="keyword">for</span> _, item := <span class="keyword">range</span> nums&#123;</span><br><span class="line">		m.add(item)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> m.heap[<span class="number">0</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://schneide.blog/2019/12/27/code-duplication-is-not-always-evil/" target="_blank" rel="noopener">Code duplication is not always evil</a></p>
+<p>作者对“代码重复”概念进一步思考，认为这个词描述太模糊。为了避免重复而重用代码可能得不偿失。作者举例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Price</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> BigDecimal amount;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> Currency currency;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Price</span><span class="params">(BigDecimal amount, Currency currency)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.amount = amount;</span><br><span class="line">        <span class="keyword">this</span>.currency = currency;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// more methods like add(Price)</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Discount</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> BigDecimal amount;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> Currency currency;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Discount</span><span class="params">(BigDecimal amount, Currency currency)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.amount = amount;</span><br><span class="line">        <span class="keyword">this</span>.currency = currency;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// more methods like add(Discount)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>价格和折扣的初始领域实体可以以完全相同的方式实现，但它们是完全不同的抽象，在后期行为中可能完全不同。如果设计初期使用一个对象描述，后期再拆开代价会很高。</p>
+<p>作者进而得出结论：相同抽象的重复代码是软件设计中万恶之源。</p>
+<p>如果通过消除代码重复来引入独立概念的耦合，往往比真正的代码复制更难发现和解决。<br>“复制允许代码独立发展”这个思维也很重要。</p>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><p>brew update卡死，换科大源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">替换 homebrew-core源</span></span><br><span class="line">cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"</span><br><span class="line">git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">替换 Homebrew Bottles源</span></span><br><span class="line">echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' &gt;&gt; ~/.bash_profile</span><br><span class="line">source ~/.bash_profile</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://studygolang.com/articles/25292" target="_blank" rel="noopener">Go：协程，操作系统线程和 CPU 管理</a></p>
+<p>本文介绍了协程和线程管理。</p>
+<ul>
+<li>每个协程（G）运行在与一个逻辑 CPU（P）相关联的 OS 线程（M）上。</li>
+<li>Go 根据机器逻辑 CPU 的个数来创建不同的 P，并且把它们保存在一个空闲 P 的 list 里。</li>
+<li>新创建的已经准备好的协程会唤醒一个 P，这个 P 通过与之相关联的 OS 线程来创建一个 M。</li>
+<li>在程序启动阶段，Go 就已经创建了一些 OS 线程并与 M 相关联了。</li>
+<li>在系统调用中，Go 不会限制可阻塞的 OS 线程数。GOMAXPROCS 变量表示可同时运行用户级 Go 代码的操作系统线程的最大数量。</li>
+<li>Go 优化了线程使用，所以当协程阻塞时，它仍可复用。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2020/01/13/Arts-week012/" data-id="ck5cb9ux1000b1x558yfqenww" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/13/Arts-week011/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arts-week011
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/13/Arts-week014/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week014</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week010/">Arts-week010</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week011/">Arts-week011</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week012/">Arts-week012</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week014/">Arts-week014</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week006/">Arts-week006</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

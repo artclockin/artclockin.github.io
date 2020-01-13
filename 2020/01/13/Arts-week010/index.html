@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Arts-week010 | Artplans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Arts-0101.Algorithm 不同的二叉搜索树 II  给定一个整数 n，生成所有由 1 … n 为节点所组成的二叉搜索树。 示例: 输入: 3  输出:  [    [1,null,3,2],    [3,2,null,1],  [3,1,null,null,2],    [2,1,3],    [1,null,2,null,3]  ]  解释:  以上的输出对应以下 5 种不同结构的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arts-week010">
+<meta property="og:url" content="https:&#x2F;&#x2F;artclockin.github.io&#x2F;2020&#x2F;01&#x2F;13&#x2F;Arts-week010&#x2F;index.html">
+<meta property="og:site_name" content="Artplans">
+<meta property="og:description" content="Arts-0101.Algorithm 不同的二叉搜索树 II  给定一个整数 n，生成所有由 1 … n 为节点所组成的二叉搜索树。 示例: 输入: 3  输出:  [    [1,null,3,2],    [3,2,null,1],  [3,1,null,null,2],    [2,1,3],    [1,null,2,null,3]  ]  解释:  以上的输出对应以下 5 种不同结构的">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2020-01-13T10:34:13.168Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Artplans" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Artplans</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://artclockin.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Arts-week010" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/13/Arts-week010/" class="article-date">
+  <time datetime="2020-01-13T10:34:13.168Z" itemprop="datePublished">2020-01-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arts-week010
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Arts-010"><a href="#Arts-010" class="headerlink" title="Arts-010"></a>Arts-010</h1><h2 id="1-Algorithm"><a href="#1-Algorithm" class="headerlink" title="1.Algorithm"></a>1.Algorithm</h2><ol start="95">
+<li><a href="https://leetcode-cn.com/problems/unique-binary-search-trees-ii/" target="_blank" rel="noopener">不同的二叉搜索树 II</a></li>
+</ol>
+<p>给定一个整数 n，生成所有由 1 … n 为节点所组成的二叉搜索树。</p>
+<p>示例:</p>
+<p>输入: 3<br>  输出:<br>  [<br>    [1,null,3,2],<br>    [3,2,null,1],<br>  [3,1,null,null,2],<br>    [2,1,3],<br>    [1,null,2,null,3]<br>  ]<br>  解释:<br>  以上的输出对应以下 5 种不同结构的二叉搜索树：</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>         <span class="number">3</span>     <span class="number">3</span>      <span class="number">2</span>      <span class="number">1</span></span><br><span class="line">   \       /     /      / \      \</span><br><span class="line">    <span class="number">3</span>     <span class="number">2</span>     <span class="number">1</span>      <span class="number">1</span>   <span class="number">3</span>      <span class="number">2</span></span><br><span class="line">   /     /       \                 \</span><br><span class="line">  <span class="number">2</span>     <span class="number">1</span>         <span class="number">2</span>                 <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>My Solution:</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">generateTrees</span><span class="params">(n <span class="keyword">int</span>)</span> []*<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> n == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> []*TreeNode&#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> createTrees(<span class="number">1</span>,n)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">createTrees</span><span class="params">(start <span class="keyword">int</span>, end <span class="keyword">int</span>)</span> []*<span class="title">TreeNode</span></span> &#123;</span><br><span class="line">	ret := []*TreeNode&#123;&#125;</span><br><span class="line">	<span class="keyword">if</span> start &gt; end &#123;</span><br><span class="line">		ret = <span class="built_in">append</span>(ret, <span class="literal">nil</span>)</span><br><span class="line">		<span class="keyword">return</span> ret</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i := start; i &lt;= end; i++ &#123;</span><br><span class="line">		lt := createTrees(start, i<span class="number">-1</span>)</span><br><span class="line">		rt := createTrees(i+<span class="number">1</span>, end)</span><br><span class="line">		<span class="keyword">for</span> _, l := <span class="keyword">range</span> lt &#123;</span><br><span class="line">			<span class="keyword">for</span> _, r := <span class="keyword">range</span> rt &#123;</span><br><span class="line">				node := &amp;TreeNode&#123;</span><br><span class="line">					Val: i,</span><br><span class="line">					Left: l,</span><br><span class="line">					Right:r,</span><br><span class="line">				&#125;</span><br><span class="line">				ret = <span class="built_in">append</span>(ret, node)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-Review"><a href="#2-Review" class="headerlink" title="2.Review"></a>2.Review</h2><p><a href="https://dmitripavlutin.com/javascript-classes-complete-guide" target="_blank" rel="noopener">The Complete Guide to JavaScript Classes</a></p>
+<p>本文介绍了JavaScript的类语法，并简单对比了类语法和原型继承语法。类语法对熟悉Java等面向对象语言来说非常熟悉，JavaScript在ES2015中引入类语法，包括了构造器、字段、类字段、私有、公有、静态属性和方法以及继承等。文中给了大量例子。</p>
+<h5 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> UserClass = <span class="class"><span class="keyword">class</span> </span>&#123;</span><br><span class="line">  <span class="comment">// The body of class</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//a named export:</span></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="comment">// The body of class</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    name; <span class="comment">// =&gt; 'Jon Snow'</span></span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> user = <span class="keyword">new</span> User(<span class="string">'Jon Snow'</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="字段和方法"><a href="#字段和方法" class="headerlink" title="字段和方法"></a>字段和方法</h5><p>私有用#开头，静态用static开头</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  static #takenNames = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> isNameTaken(name) &#123;</span><br><span class="line">    return User.#takenNames.includes(name);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> #nameValue;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span> name() &#123;</span><br><span class="line">    return this.#nameValue;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">set</span> name(name) &#123;</span><br><span class="line">    <span class="keyword">if</span> (name === <span class="string">''</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`name field of User cannot be empty`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    this.#nameValue = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    User.#takenNames.push(name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user = <span class="keyword">new</span> User(<span class="string">'Jon Snow'</span>);</span><br><span class="line">User.isNameTaken(<span class="string">'Jon Snow'</span>);   <span class="comment">// =&gt; true</span></span><br><span class="line">User.isNameTaken(<span class="string">'Arya Stark'</span>); <span class="comment">// =&gt; false</span></span><br><span class="line">user.name; <span class="comment">// The getter is invoked, =&gt; 'Jon Snow'</span></span><br><span class="line">user.name = <span class="string">'Jon White'</span>; <span class="comment">// The setter is invoked</span></span><br><span class="line"></span><br><span class="line">user.name = <span class="string">''</span>; <span class="comment">// The setter throws an Error</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  name;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ContentWriter</span> <span class="keyword">extends</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  posts = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(name, posts) &#123;</span><br><span class="line">    <span class="keyword">super</span>(name);</span><br><span class="line">    <span class="keyword">this</span>.posts = posts;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  getName() &#123;</span><br><span class="line">    <span class="keyword">const</span> name = <span class="keyword">super</span>.getName();</span><br><span class="line">    <span class="keyword">if</span> (name === <span class="string">''</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'Unknwon'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> writer = <span class="keyword">new</span> ContentWriter(<span class="string">''</span>, [<span class="string">'Why I like JS'</span>]);</span><br><span class="line">writer.getName(); <span class="comment">// =&gt; 'Unknwon'</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="类型检查"><a href="#类型检查" class="headerlink" title="类型检查"></a>类型检查</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  name;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  getName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ContentWriter</span> <span class="keyword">extends</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  posts = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">constructor</span>(name, posts) &#123;</span><br><span class="line">    <span class="keyword">super</span>(name);</span><br><span class="line">    <span class="keyword">this</span>.posts = posts;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> writer = <span class="keyword">new</span> ContentWriter(<span class="string">'John Smith'</span>, [<span class="string">'Why I like JS'</span>]);</span><br><span class="line">writer <span class="keyword">instanceof</span> ContentWriter; <span class="comment">// =&gt; true</span></span><br><span class="line">writer.constructor === ContentWriter; <span class="comment">// =&gt; true</span></span><br><span class="line">writer.constructor === User;          <span class="comment">// =&gt; false</span></span><br></pre></td></tr></table></figure>
+<p>可以看出Javascript可以用熟悉的类语法写程序，对熟悉Java、C#的人来说更容易上手了，也少了很多黑魔法。</p>
+<h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3.Tips"></a>3.Tips</h2><h5 id="Go-Printf"><a href="#Go-Printf" class="headerlink" title="Go Printf"></a>Go Printf</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> fmt.Printf(<span class="string">"%t\n"</span>, <span class="literal">true</span>) <span class="comment">//true</span></span><br><span class="line"> n := <span class="number">17</span></span><br><span class="line"> fmt.Printf(<span class="string">"%T\n"</span>, n) <span class="comment">//int</span></span><br><span class="line"> fmt.Printf(<span class="string">"%v\n"</span>, n) <span class="comment">//17</span></span><br><span class="line"> fmt.Printf(<span class="string">"%b\n"</span>, n) <span class="comment">//10001</span></span><br><span class="line"> fmt.Printf(<span class="string">"%d\n"</span>, n) <span class="comment">//17</span></span><br><span class="line"> fmt.Printf(<span class="string">"%x\n"</span>, n) <span class="comment">//11</span></span><br><span class="line"> fmt.Printf(<span class="string">"%#x\n"</span>, n) <span class="comment">//0x11</span></span><br><span class="line"> fmt.Printf(<span class="string">"%#v\n"</span>, n) <span class="comment">//17</span></span><br><span class="line"> fmt.Printf(<span class="string">"%05d\n"</span>, n) <span class="comment">//00017</span></span><br><span class="line"></span><br><span class="line"> s := <span class="string">"test,测试"</span></span><br><span class="line"> fmt.Printf(<span class="string">"%s\n"</span>, s) <span class="comment">//test,测试</span></span><br><span class="line"> fmt.Printf(<span class="string">"%v\n"</span>, s) <span class="comment">//test,测试</span></span><br><span class="line"> fmt.Printf(<span class="string">"%#v\n"</span>, s) <span class="comment">//"test,测试"</span></span><br><span class="line"> fmt.Printf(<span class="string">"%010s\n"</span>, s) <span class="comment">//000test,测试</span></span><br><span class="line"></span><br><span class="line"> st := <span class="keyword">struct</span> &#123;</span><br><span class="line">name <span class="keyword">string</span></span><br><span class="line">age <span class="keyword">int</span></span><br><span class="line"> &#125;&#123;<span class="string">"张三"</span>,<span class="number">10</span>&#125;</span><br><span class="line"> fmt.Printf(<span class="string">"%v\n"</span>, st) <span class="comment">//&#123;张三 10&#125;</span></span><br><span class="line"> fmt.Printf(<span class="string">"%+v\n"</span>, st) <span class="comment">//&#123;name:张三 age:10&#125;</span></span><br><span class="line"> fmt.Printf(<span class="string">"%#v\n"</span>, st) <span class="comment">//struct &#123; name string; age int &#125;&#123;name:"张三", age:10&#125;</span></span><br><span class="line"></span><br><span class="line"> fmt.Printf(<span class="string">"%p\n"</span>, &amp;st) <span class="comment">//例如：0xc00009a000</span></span><br><span class="line"> fmt.Printf(<span class="string">"%#p\n"</span>, &amp;st) <span class="comment">//例如：c00009a000</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-Share"><a href="#4-Share" class="headerlink" title="4.Share"></a>4.Share</h2><p><a href="https://juejin.im/post/5df0a5866fb9a0160823723c" target="_blank" rel="noopener">通过 sync.Once 学习到 Go 的内存模型</a></p>
+<p>文章从Go单例模式采用sync.Once实现谈起，深入其实现源码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> sync</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"sync/atomic"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Once is an object that will perform exactly one action.</span></span><br><span class="line"><span class="keyword">type</span> Once <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="comment">// done indicates whether the action has been performed.</span></span><br><span class="line">	<span class="comment">// It is first in the struct because it is used in the hot path.</span></span><br><span class="line">	<span class="comment">// The hot path is inlined at every call site.</span></span><br><span class="line">	<span class="comment">// Placing done first allows more compact instructions on some architectures (amd64/x86),</span></span><br><span class="line">	<span class="comment">// and fewer instructions (to calculate offset) on other architectures.</span></span><br><span class="line">	done <span class="keyword">uint32</span></span><br><span class="line">	m    Mutex</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Do calls the function f if and only if Do is being called for the</span></span><br><span class="line"><span class="comment">// first time for this instance of Once. In other words, given</span></span><br><span class="line"><span class="comment">// 	var once Once</span></span><br><span class="line"><span class="comment">// if once.Do(f) is called multiple times, only the first call will invoke f,</span></span><br><span class="line"><span class="comment">// even if f has a different value in each invocation. A new instance of</span></span><br><span class="line"><span class="comment">// Once is required for each function to execute.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Do is intended for initialization that must be run exactly once. Since f</span></span><br><span class="line"><span class="comment">// is niladic, it may be necessary to use a function literal to capture the</span></span><br><span class="line"><span class="comment">// arguments to a function to be invoked by Do:</span></span><br><span class="line"><span class="comment">// 	config.once.Do(func() &#123; config.init(filename) &#125;)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Because no call to Do returns until the one call to f returns, if f causes</span></span><br><span class="line"><span class="comment">// Do to be called, it will deadlock.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// If f panics, Do considers it to have returned; future calls of Do return</span></span><br><span class="line"><span class="comment">// without calling f.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *Once)</span> <span class="title">Do</span><span class="params">(f <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="comment">// Note: Here is an incorrect implementation of Do:</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">//	if atomic.CompareAndSwapUint32(&amp;o.done, 0, 1) &#123;</span></span><br><span class="line">	<span class="comment">//		f()</span></span><br><span class="line">	<span class="comment">//	&#125;</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// Do guarantees that when it returns, f has finished.</span></span><br><span class="line">	<span class="comment">// This implementation would not implement that guarantee:</span></span><br><span class="line">	<span class="comment">// given two simultaneous calls, the winner of the cas would</span></span><br><span class="line">	<span class="comment">// call f, and the second would return immediately, without</span></span><br><span class="line">	<span class="comment">// waiting for the first's call to f to complete.</span></span><br><span class="line">	<span class="comment">// This is why the slow path falls back to a mutex, and why</span></span><br><span class="line">	<span class="comment">// the atomic.StoreUint32 must be delayed until after f returns.</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> atomic.LoadUint32(&amp;o.done) == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="comment">// Outlined slow-path to allow inlining of the fast-path.</span></span><br><span class="line">		o.doSlow(f)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(o *Once)</span> <span class="title">doSlow</span><span class="params">(f <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	o.m.Lock()</span><br><span class="line">	<span class="keyword">defer</span> o.m.Unlock()</span><br><span class="line">	<span class="keyword">if</span> o.done == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> atomic.StoreUint32(&amp;o.done, <span class="number">1</span>)</span><br><span class="line">		f()</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>作者对实现关键点进行解读如为什么需要doSlow，为什么已经使用lock还需要atomic.StoreUnit32等，很不错。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://artclockin.github.io/2020/01/13/Arts-week010/" data-id="ck5cb9uwx00091x55gkea6m6j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/13/Arts-week011/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arts-week011</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week010/">Arts-week010</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week011/">Arts-week011</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week012/">Arts-week012</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Arts-week014/">Arts-week014</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/Arts-week006/">Arts-week006</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Askyer<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
